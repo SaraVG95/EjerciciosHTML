@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Práctica con Formularios</title>
+</head>
+<body>
+	<form method="post" action="#">
+		<fieldset>
+			<legend>Datos personales</legend>
+		<p>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre">
+		</p>
+		<p>
+			<label for="provincia">Provincia</label>
+			<select name="provincia" id="">
+				<option value="">Toledo</option>
+				<option value="">Ciudad Real</option>
+				<option value="">Huesca</option>
+			</select>
+		</p>
+		<p>
+			<label for="genero">Sexo:</label><br>
+			<input type="radio" name="genero" value="masculino"/>Hombre<br>
+			<input type="radio" name="genero" value="femenino"/>Mujer
+		</p>
+		</fieldset>
+		
+		<p>
+			<textarea style="resize: none" cols="30" rows="5"></textarea>
+		</p>
+
+		<p>
+			<button type="button">Normal</button>
+			<button type="reset">Reset</button>
+			<button type="submit">Submit</button>
+			<button disabled="disabled">Disabled</button>
+		</p>
+		
+	</form>
+</body>
+</html>
