@@ -1,0 +1,30 @@
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  form {
+    background: #036d6d;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    color: white;
+  }
+
+  input, textarea {
+    width: 60%;
+    padding: 10px;
+	margin-left: 30%;
+    border: none;
+  }
+
+  .age {
+    display: flex;
+	width: 20px;
+	align-items:flex-start;
+  }
+
+  .espacio{
+	margin-right: 140px;
+  }
