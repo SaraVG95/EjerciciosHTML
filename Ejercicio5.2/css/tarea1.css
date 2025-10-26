@@ -1,0 +1,35 @@
+*{
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+header{
+	display: flex;
+	width: 100%;
+	border: 1px solid black;
+	height: 60px;
+	font-size: large;
+	background-color:black;
+	color:white;
+	padding: 10px;
+}
+
+main{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	border: 1px solid black;
+	height: 40px;
+	font-size:small;
+	background-color: grey;
+	color:black;
+}
+
+a{
+	border: 1px solid white;
+	padding: 10px;
+	background-color: grey;
+	color: black;
+	text-decoration: none;
+}

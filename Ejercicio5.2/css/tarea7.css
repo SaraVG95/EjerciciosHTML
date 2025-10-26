@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .box {
+	margin: 2px;
+    background: gray;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	width: 70px;
+    height: 30px;
+    flex: 1;
+  }
+
+  /* "flex:1" Hace que todas las cajas dentro de la fila
+  tengan el mismo ancho y llenen todo el espacio disponible */

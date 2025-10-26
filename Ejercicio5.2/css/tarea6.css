@@ -1,0 +1,22 @@
+header {
+  font-size: 40px;
+  padding: 10px;
+  margin: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table {
+  width: 50%;
+  margin: 0 auto;
+  border-spacing: 8px;
+}
+
+img {
+  width: 100%;
+  margin: 0px;
+}
+
+td{
+	vertical-align: top;
+}
