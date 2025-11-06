@@ -34,7 +34,6 @@ header {
 
 header h1 {
 	font-size: 50px;
-	padding-left: 20px;
 }
 
 nav ul {
@@ -150,7 +149,7 @@ footer {
 }
 
 .foto{
-	margin-left: 70px;
+	margin-left: 10px;
 	width: 100%;
 }
 
