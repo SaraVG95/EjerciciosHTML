@@ -1,0 +1,255 @@
+@use "sass:math";
+@use "sass:list";
+
+// Colores generales
+$color-background: #CCC;
+$color-base: #333;
+
+//Colores de base
+$color-error: #FF0000;
+$color-warning: rgb(239, 241, 120);
+$color-accepted: rgb(55, 138, 0);
+$color-normal: rgb(0, 110, 255);
+$color-shadow: #888;
+
+// Colores del borde
+$border-color: $color-base;
+$border-style:"solid";
+$border-width: 0.1rem;
+$border-radius: 1rem;
+
+//Colores barra de menú
+$navbar-background-color-light: rgb(155, 111, 145);
+$navbar-background-color-dark: rgb(46, 40, 140);
+$body-background-color-light: rgb(146, 130, 142);
+$body-background-color-dark: rgb(94, 91, 147);
+
+//Navbar
+$navbar-padding: 0.2rem;
+$navbar-li-paddingleft: 1rem;
+$navbar-li-paddingright: 1rem;
+$navbar-li-display: inline-block;
+$navbar-li-active-fontweight: bolder;
+$navbar-li-textdecoration: none;
+$navbar-color-hover: white;
+$navbar-color-base: #f30909;
+
+//h3
+$h3-padding-left: 20px;
+
+//Extra para botones
+$extra-display: flex;
+$extra-justify-content: space-between;
+$extra-margin-right: 40px;
+$extra-margin-top: 5px;
+
+//Container
+$main-container-margin: 0px auto;
+$main-container-width: 80%;
+
+//Figure tamaños
+$figure-padding: 1rem;
+$figure-font-size: 0.8rem;
+$figure-margin: 0.5rem;
+$figure-width: 25%;
+$figure-text-align: center;
+$figure-img-width: 100%;
+
+// Controles
+$light-theme: true;
+$dark-theme: true;
+
+//mapa tamaños
+$mapa-repeat: no-repeat;
+$mapa-background-size: contain;
+$mapa-padding: 10px;
+$mapa-border: 2px solid #333;
+$mapa-border-radius: 5rem;
+$mapa-margin: 1rem;
+$mapa-margin-left: 3rem;
+$mapa-margin-right:3rem;
+
+//boton tamaños
+$boton-display: inline-block;
+$boton-text-align: center;
+$boton-text-decoration: none;
+$boton-padding: 0.5rem;
+$boton-border-radius: 0.4rem;
+$boton-box-shadow: 0.2rem 0.2rem #888;
+
+//Variable test
+$test: false;
+
+// Mixins
+@mixin centrado {
+	margin: 0 auto;
+	}
+
+// ----------------------------------------------------------
+
+
+.container{
+	width: $main-container-width;
+	// margin: $main-container-margin;
+	@include centrado;
+}
+
+body {
+	@if $light-theme == true {
+		background-color: $body-background-color-light;
+		color: #000;
+	} @else if $dark-theme {
+		background-color: $body-background-color-dark;
+		color: #fff;
+	} @else {
+		background-color: #aaa;
+		color: #444;
+	}
+	@if $test == true {
+		@error "Muy mal todo, arréglalo";
+		@debug "Test tiene el siguiente valor: #{$test}";
+	}
+	else{
+		@warn "Muy bien pero con cuidadito";
+		@debug "Test tiene el siguiente valor: #{$test}";
+	}
+	
+}
+
+nav{
+	@if $light-theme == true {
+		background-color: $navbar-background-color-light;
+		color: #000;
+	} @else if $dark-theme == true {
+		background-color: $navbar-background-color-dark;
+		color: #fff;
+	} @else {
+		background-color: #aaa;
+		color: #444;
+	}
+	padding: $navbar-padding;
+	display: $extra-display;
+	justify-content: $extra-justify-content;
+
+	div{
+		margin-right: $extra-margin-right;
+		margin-top: $extra-margin-top;
+	}
+	
+	ul{
+		li{
+			display: $navbar-li-display;
+			padding-left: $navbar-li-paddingleft;
+			padding-right: $navbar-li-paddingright;
+
+			&:active{
+				color: $navbar-color-hover;
+				font-weight: $navbar-li-active-fontweight;
+			}
+
+			&:hover{
+				color: $navbar-color-hover;
+			}
+
+			a{
+				text-decoration: $navbar-li-textdecoration;
+			}
+		}
+	}
+}
+
+figure.card {
+	border: $border-width #{$border-style} $border-color;
+	border-radius: $border-radius;
+	display: $navbar-li-display;
+	padding: $figure-padding;
+	width: $figure-width;	
+
+	h3{
+		padding-left: $h3-padding-left;
+	}
+	img{
+		border-radius: 2*$border-radius;
+		width: $figure-img-width;
+	}
+	figcaption {
+		font-size: $figure-font-size;
+		margin: $figure-margin;
+		text-align: $figure-text-align;
+	}
+}
+
+$num:1;
+$color-list: #0f0, #00f, orange, yellow,  #0f0;
+
+@while $num < 6 {
+	figure:nth-child(#{$num}) {
+		color: rgb(11, 0, 0);
+		background-color: list.nth($color-list, $num);
+	}
+	$num: $num + 1;
+}
+
+@for $i from 1 through 4 {
+  li:nth-of-type(#{$i}) {
+	color: red;
+	background-color: list.nth($color-list, $i);
+  }
+}
+
+// $banderas: espana, francia, italia, alemania;
+// @each $u in $banderas {
+//     .profile-#{$u}{
+//         background: image-url("img/#{$u}.png") no repeat;
+//     }
+// }
+
+$mapa: (
+	espana:"espana.png",
+	francia: "francia.png",
+	italia: "italia.png",
+	alemania: "alemania.png"
+);
+
+@each $b, $v in $mapa {
+	div.#{$b}{
+		background-image: url("img/#{$v}");
+		background-repeat: $mapa-repeat;
+		background-size: $mapa-background-size;
+		padding: $mapa-padding;
+		border: $mapa-border;
+		border-radius: $mapa-border-radius;
+		margin: $mapa-margin;
+		margin-left: $mapa-margin-left;
+		margin-right: $mapa-margin-right;
+	}
+}
+
+.btn {
+	display: $boton-display;
+	text-align: $boton-text-align;
+	border-radius: $boton-border-radius;
+	padding: $boton-padding;
+	text-decoration: $boton-text-decoration;
+
+	&:hover {
+		box-shadow: $boton-box-shadow;
+	}
+	&:active {
+        background-color: orange;
+        color: white;
+    }
+}
+
+$btn-colors: ("error" : $color-error,
+			"warning" : $color-warning,
+			"accepted" : $color-accepted,
+			"normal" : $color-normal);
+
+@each $k,
+$v in $btn-colors {
+
+    .btn-#{$k} {
+        background-color: $v;
+    }
+}

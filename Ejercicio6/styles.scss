@@ -1,0 +1,55 @@
+$grey: #888;
+$header-background: #e6aed5;
+$link-normal: #142bc4;
+$link-visited: #7f0c0c;
+$link-active: #09f37e;
+$link-hover: #ffdd00;
+
+.header{
+	background-color: $header-background;
+	}
+
+// Tamaños para los iconos
+$sizes: (
+	40px,
+	80px,
+	160px
+);
+
+// Breakpoints para la página
+$breakpoints: (
+	"pequeño": 576px,
+	"medio": 768px,
+	"grande": 992px,
+);
+
+// Interpolación en selectores
+$button-type:"error";
+$btn-color: #f00;
+
+.btn-#{$button-type} {
+	background-color: $btn-color
+}
+
+// Interpolación en uso de funciones
+
+$fondo: "img/fondos/default.png";
+
+.container{
+	background-image: url(#{$fondo});
+}
+
+// Anidamiento básico
+a{
+	color: $link-normal;
+	text-decoration: none;
+	&:hover {
+		color: $link-hover;
+	}
+	&:visited {
+		color: $link-visited;
+	}
+	&:active {
+		color: $link-active
+	}
+}
