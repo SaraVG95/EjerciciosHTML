@@ -1,0 +1,418 @@
+/// @access private
+/// @author SaraVG
+
+/// VARIABLES GENERALES
+
+$blue: #112C50;
+$white: #F5F5F5;
+$accent: #126F8D;
+$black: #000;
+$grey: #D9D9D9;
+$bg: #F1F0EA;
+$font-body: "Neue Montreal";
+$font-title: "Reckless Neue";
+$wrapper-width: 90%;
+$wrapper-margin: 0 auto;
+$wrapper-columns: repeat(12, 1fr);
+$wrapper-gap: 20px;
+$section-width: 80%;
+$section-margin: 100px auto;
+$marker-width: 50px;
+$marker-height: 5px;
+$marker-top: -12px;
+$marker-color: $accent;
+$btn-display: inline-block;
+$btn-padding: 12px 20px;
+$btn-radius: 10px;
+$btn-transform: uppercase;
+$btn-decoration: none;
+$btn-font-size: 14px;
+$btn-primary-bg: #E3BE86;
+$btn-secondary-bg: #C55A26;
+
+
+/// Body
+$container-box-sizing: border-box;
+$body-margin: 0;
+$body-font-family: $font-body;
+
+/// Hero
+$hero-padding-bottom: 80px;
+$topbar-padding: 8px 0;
+$topbar-width: 90%;
+$topbar-margin: 0 auto;
+$topbar-display: flex;
+$topbar-justify: space-between;
+$topbar-font-size: 14px;
+$heroContent-width: 90%;
+$heroContent-margin: 80px auto;
+$heroContent-max-width: 600px;
+$hero-h1-size: 48px;
+$hero-h1-margin: 20px 0;
+$hero-p-margin: 15px;
+
+/// Nav
+$nav-width: 90%;
+$nav-margin: 30px auto;
+$nav-display: flex;
+$nav-justify-content: space-between;
+$nav-align-items: center;
+$nav-ul-display: flex;
+$nav-ul-gap: 30px;
+$nav-a-weight: 700;
+$nav-a-decoration: none;
+
+/// About
+$about-title-size: 32px;
+$about-title-margin: 10px;
+$about-p-margin: 12px;
+$about-img-radius: 20px;
+
+/// Services
+$services-padding: 80px 0;
+$services-title-size: 36px;
+$services-text-width: 450px;
+$services-text-margin: 20px auto;
+
+/// Team
+$team-width: 90%;
+$team-margin: 100px auto;
+$team-title-size: 28px;
+$team-title-margin: 30px;
+$team-members-gap: 20px;
+$team-img-radius: 10px;
+$team-h4-margin: 8px 0;
+
+/// Testimonials
+$testimonials-padding: 80px 0;
+$testimonials-title-margin: 40px;
+$testimonials-container-width: 80%;
+$testimonials-gap: 20px;
+$testimonials-bg: $white;
+$testimonials-radius: 10px;
+$testimonials-padding-box: 20px;
+
+/// Contact form
+$contact-form-width: 70%;
+$contact-form-gap: 12px;
+$contact-input-padding: 10px;
+$contact-textarea-height: 150px;
+
+/// Location
+$location-map-height: 400px;
+
+/// Footer
+$footer-padding: 50px 0;
+$footer-display: flex;
+$footer-justify: space-around;
+$footer-wrap: wrap;
+$footer-input-padding: 8px;
+
+/// ESTILOS GENERALES
+
+* {
+  box-sizing: $container-box-sizing;
+}
+
+body {
+  margin: $body-margin;
+  background: $bg;
+  font-family: $body-font-family;
+  color: $black;
+}
+
+.wrapper {
+  width: $wrapper-width;
+  margin: $wrapper-margin;
+  display: grid;
+  grid-template-columns: $wrapper-columns;
+  gap: $wrapper-gap;
+}
+
+.hero {
+  background: $blue;
+  color: $white;
+  padding-bottom: $hero-padding-bottom;
+
+  .top-bar {
+    padding: $topbar-padding;
+    background: $blue;
+
+    .top-bar-content {
+      width: $topbar-width;
+      margin: $topbar-margin;
+      display: $topbar-display;
+      justify-content: $topbar-justify;
+
+      a {
+        color: $white;
+        font-size: $topbar-font-size;
+      }
+    }
+  }
+
+  nav {
+    width: $nav-width;
+    margin: $nav-margin;
+    display: $nav-display;
+    justify-content: $nav-justify-content;
+    align-items: $nav-align-items;
+
+    ul {
+      display: $nav-ul-display;
+      gap: $nav-ul-gap;
+
+      a {
+        color: $white;
+        font-weight: $nav-a-weight;
+        text-decoration: $nav-a-decoration;
+      }
+    }
+  }
+
+  .hero-content {
+    width: $heroContent-width;
+    margin: $heroContent-margin;
+    max-width: $heroContent-max-width;
+
+    h1 {
+      font-family: $font-title;
+      font-size: $hero-h1-size;
+      margin: $hero-h1-margin;
+    }
+
+    p {
+      margin-bottom: $hero-p-margin;
+      color: $white;
+    }
+  }
+}
+
+.btn {
+  display: $btn-display;
+  padding: $btn-padding;
+  border-radius: $btn-radius;
+  text-transform: $btn-transform;
+  text-decoration: $btn-decoration;
+  font-size: $btn-font-size;
+
+  &.primary {
+    background: $btn-primary-bg;
+    color: $black;
+  }
+
+  &.secondary {
+    background: $btn-secondary-bg;
+    color: $white;
+  }
+}
+
+.about {
+  @extend .wrapper;
+
+  article {
+    grid-column: 1 / 7;
+
+    h2 {
+      font-family: $font-title;
+      font-size: $about-title-size;
+      margin-bottom: $about-title-margin;
+    }
+
+    p {
+      margin-bottom: $about-p-margin;
+    }
+  }
+
+  aside {
+    grid-column: 7 / 13;
+
+    img {
+      width: 100%;
+      border-radius: $about-img-radius;
+    }
+  }
+}
+
+.services {
+  text-align: center;
+  padding: $services-padding;
+  background: $blue;
+  color: $white;
+
+  h3 {
+    font-family: $font-title;
+    font-size: $services-title-size;
+  }
+
+  p {
+    width: $services-text-width;
+    margin: $services-text-margin;
+  }
+}
+
+.team {
+  width: $team-width;
+  margin: $team-margin;
+
+  h3 {
+    font-family: $font-title;
+    font-size: $team-title-size;
+    margin-bottom: $team-title-margin;
+    max-width: 600px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $marker-top;
+      left: 0;
+      width: $marker-width;
+      height: $marker-height;
+      background: $marker-color;
+    }
+  }
+
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $team-members-gap;
+
+    article {
+      grid-column: span 4;
+
+      img {
+        width: 100%;
+        border-radius: $team-img-radius;
+      }
+
+      h4 {
+        font-family: $font-title;
+        margin: $team-h4-margin;
+      }
+    }
+  }
+}
+
+.testimonials {
+  background: $blue;
+  color: $white;
+  padding: $testimonials-padding;
+
+  h3 {
+    font-family: $font-title;
+    text-align: center;
+    margin-bottom: $testimonials-title-margin;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $marker-top;
+      left: 50%;
+      transform: translateX(-50%);
+      width: $marker-width;
+      height: $marker-height;
+      background: $marker-color;
+    }
+  }
+
+  .testimonials-container {
+    width: $testimonials-container-width;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: $testimonials-gap;
+
+    blockquote {
+      grid-column: span 4;
+      background: $testimonials-bg;
+      color: $black;
+      padding: $testimonials-padding-box;
+      border-radius: $testimonials-radius;
+    }
+  }
+}
+
+.contact-form {
+  width: $section-width;
+  margin: $section-margin;
+
+  h3 {
+    font-family: $font-title;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $marker-top;
+      left: 0;
+      width: $marker-width;
+      height: $marker-height;
+      background: $marker-color;
+    }
+  }
+
+  form {
+    width: $contact-form-width;
+    display: flex;
+    flex-direction: column;
+    gap: $contact-form-gap;
+
+    input,
+    textarea {
+      background: $grey;
+      border: none;
+      padding: $contact-input-padding;
+    }
+
+    textarea {
+      height: $contact-textarea-height;
+    }
+  }
+}
+
+.location {
+  width: $section-width;
+  margin: $section-margin;
+
+  h3 {
+    font-family: $font-title;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: $marker-top;
+      left: 0;
+      width: $marker-width;
+      height: $marker-height;
+      background: $marker-color;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: $location-map-height;
+    border: none;
+  }
+}
+
+footer {
+  background: $blue;
+  color: $white;
+  padding: $footer-padding;
+  display: $footer-display;
+  justify-content: $footer-justify;
+  flex-wrap: $footer-wrap;
+
+  a {
+    color: $white;
+  }
+
+  .newsletter input {
+    padding: $footer-input-padding;
+    background: $grey;
+    border: none;
+  }
+}
