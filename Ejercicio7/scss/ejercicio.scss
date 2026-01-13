@@ -1,418 +1,308 @@
-/// @access private
-/// @author SaraVG
+$dark: #120156;
+$light: #f2f2f2;
+$accent: #a0713b;
+$bg: #ddd8cf;
+$text: #222;
+$form: #bfbfbf;
 
-/// VARIABLES GENERALES
-
-$blue: #112C50;
-$white: #F5F5F5;
-$accent: #126F8D;
-$black: #000;
-$grey: #D9D9D9;
-$bg: #F1F0EA;
-$font-body: "Neue Montreal";
-$font-title: "Reckless Neue";
-$wrapper-width: 90%;
-$wrapper-margin: 0 auto;
-$wrapper-columns: repeat(12, 1fr);
-$wrapper-gap: 20px;
-$section-width: 80%;
-$section-margin: 100px auto;
-$marker-width: 50px;
-$marker-height: 5px;
-$marker-top: -12px;
-$marker-color: $accent;
-$btn-display: inline-block;
-$btn-padding: 12px 20px;
-$btn-radius: 10px;
-$btn-transform: uppercase;
-$btn-decoration: none;
-$btn-font-size: 14px;
-$btn-primary-bg: #E3BE86;
-$btn-secondary-bg: #C55A26;
-
-
-/// Body
-$container-box-sizing: border-box;
-$body-margin: 0;
-$body-font-family: $font-body;
-
-/// Hero
-$hero-padding-bottom: 80px;
-$topbar-padding: 8px 0;
-$topbar-width: 90%;
-$topbar-margin: 0 auto;
-$topbar-display: flex;
-$topbar-justify: space-between;
-$topbar-font-size: 14px;
-$heroContent-width: 90%;
-$heroContent-margin: 80px auto;
-$heroContent-max-width: 600px;
-$hero-h1-size: 48px;
-$hero-h1-margin: 20px 0;
-$hero-p-margin: 15px;
-
-/// Nav
-$nav-width: 90%;
-$nav-margin: 30px auto;
-$nav-display: flex;
-$nav-justify-content: space-between;
-$nav-align-items: center;
-$nav-ul-display: flex;
-$nav-ul-gap: 30px;
-$nav-a-weight: 700;
-$nav-a-decoration: none;
-
-/// About
-$about-title-size: 32px;
-$about-title-margin: 10px;
-$about-p-margin: 12px;
-$about-img-radius: 20px;
-
-/// Services
-$services-padding: 80px 0;
-$services-title-size: 36px;
-$services-text-width: 450px;
-$services-text-margin: 20px auto;
-
-/// Team
-$team-width: 90%;
-$team-margin: 100px auto;
-$team-title-size: 28px;
-$team-title-margin: 30px;
-$team-members-gap: 20px;
-$team-img-radius: 10px;
-$team-h4-margin: 8px 0;
-
-/// Testimonials
-$testimonials-padding: 80px 0;
-$testimonials-title-margin: 40px;
-$testimonials-container-width: 80%;
-$testimonials-gap: 20px;
-$testimonials-bg: $white;
-$testimonials-radius: 10px;
-$testimonials-padding-box: 20px;
-
-/// Contact form
-$contact-form-width: 70%;
-$contact-form-gap: 12px;
-$contact-input-padding: 10px;
-$contact-textarea-height: 150px;
-
-/// Location
-$location-map-height: 400px;
-
-/// Footer
-$footer-padding: 50px 0;
-$footer-display: flex;
-$footer-justify: space-around;
-$footer-wrap: wrap;
-$footer-input-padding: 8px;
-
-/// ESTILOS GENERALES
+$font-main: Tahoma, sans-serif;
+$font-title: "Times New Roman", serif;
 
 * {
-  box-sizing: $container-box-sizing;
+  box-sizing: border-box;
 }
 
 body {
-  margin: $body-margin;
+  margin: 0;
   background: $bg;
-  font-family: $body-font-family;
-  color: $black;
+  font-family: $font-main;
+  color: $text;
+  line-height: 1.35;
 }
 
 .wrapper {
-  width: $wrapper-width;
-  margin: $wrapper-margin;
+  width: 94%;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: $wrapper-columns;
-  gap: $wrapper-gap;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 9px 13px;
+  border-radius: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 11px;
+  border: 1px solid #333;
+
+  &.primary {
+    background: #d5b48a;
+    color: $text;
+  }
+
+  &.secondary {
+    background: #7a3a1d;
+    color: $light;
+  }
 }
 
 .hero {
-  background: $blue;
-  color: $white;
-  padding-bottom: $hero-padding-bottom;
+  background: url("../img/header-background.jpg") left top / cover no-repeat;
+  color: $light;
+  padding-bottom: 50px;
 
   .top-bar {
-    padding: $topbar-padding;
-    background: $blue;
+    background: $dark;
+    padding: 5px 0;
 
     .top-bar-content {
-      width: $topbar-width;
-      margin: $topbar-margin;
-      display: $topbar-display;
-      justify-content: $topbar-justify;
+      width: 94%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
 
       a {
-        color: $white;
-        font-size: $topbar-font-size;
+        color: $light;
+        font-size: 11px;
       }
     }
   }
 
   nav {
-    width: $nav-width;
-    margin: $nav-margin;
-    display: $nav-display;
-    justify-content: $nav-justify-content;
-    align-items: $nav-align-items;
+    width: 94%;
+    margin: 18px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     ul {
-      display: $nav-ul-display;
-      gap: $nav-ul-gap;
+      margin: 0;
+      display: flex;
+      gap: 14px;
+      list-style-type: none;
+      padding: 0;
 
       a {
-        color: $white;
-        font-weight: $nav-a-weight;
-        text-decoration: $nav-a-decoration;
+        color: $light;
+        font-weight: 400;
+        font-size: 13px;
+        text-decoration: none;
       }
     }
   }
 
   .hero-content {
-    width: $heroContent-width;
-    margin: $heroContent-margin;
-    max-width: $heroContent-max-width;
+    width: 480px;
+    margin-left: 40px;
+
+    p:first-child {
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
 
     h1 {
       font-family: $font-title;
-      font-size: $hero-h1-size;
-      margin: $hero-h1-margin;
+      font-size: 36px;
+      line-height: 1.1;
+      margin: 0 0 14px;
     }
 
     p {
-      margin-bottom: $hero-p-margin;
-      color: $white;
+      font-size: 13px;
+      max-width: 420px;
     }
-  }
-}
 
-.btn {
-  display: $btn-display;
-  padding: $btn-padding;
-  border-radius: $btn-radius;
-  text-transform: $btn-transform;
-  text-decoration: $btn-decoration;
-  font-size: $btn-font-size;
-
-  &.primary {
-    background: $btn-primary-bg;
-    color: $black;
-  }
-
-  &.secondary {
-    background: $btn-secondary-bg;
-    color: $white;
+    .hero-buttons {
+      margin-top: 18px;
+      display: flex;
+      gap: 8px;
+    }
   }
 }
 
 .about {
   @extend .wrapper;
+  padding: 50px 0;
 
   article {
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
 
     h2 {
       font-family: $font-title;
-      font-size: $about-title-size;
-      margin-bottom: $about-title-margin;
+      font-size: 24px;
+      margin-bottom: 6px;
     }
 
     p {
-      margin-bottom: $about-p-margin;
+      margin-bottom: 8px;
+      font-size: 14px;
     }
   }
 
   aside {
-    grid-column: 7 / 13;
+    grid-column: 8 / 13;
 
     img {
-      width: 100%;
-      border-radius: $about-img-radius;
+      width: 90%;
+      border-radius: 2px;
+      margin: 12px;
     }
   }
 }
 
 .services {
   text-align: center;
-  padding: $services-padding;
-  background: $blue;
-  color: $white;
+  padding: 70px 0;
+  background: url("../img/techo-cristal.jpg") center / cover no-repeat;
+  color: $light;
 
   h3 {
     font-family: $font-title;
-    font-size: $services-title-size;
+    font-size: 26px;
   }
 
   p {
-    width: $services-text-width;
-    margin: $services-text-margin;
+    width: 480px;
+    margin: 14px auto;
+    font-size: 13px;
   }
 }
 
 .team {
-  width: $team-width;
-  margin: $team-margin;
+  width: 94%;
+  margin: 60px auto;
 
   h3 {
     font-family: $font-title;
-    font-size: $team-title-size;
-    margin-bottom: $team-title-margin;
-    max-width: 600px;
+    font-size: 22px;
+    margin-bottom: 18px;
+    max-width: 520px;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: $marker-top;
-      left: 0;
-      width: $marker-width;
-      height: $marker-height;
-      background: $marker-color;
-    }
   }
 
   .team-members {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: $team-members-gap;
+    gap: 12px;
 
     article {
       grid-column: span 4;
 
       img {
         width: 100%;
-        border-radius: $team-img-radius;
+        border-radius: 2px;
       }
 
       h4 {
         font-family: $font-title;
-        margin: $team-h4-margin;
+        margin: 5px 0;
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 12px;
       }
     }
   }
 }
 
 .testimonials {
-  background: $blue;
-  color: $white;
-  padding: $testimonials-padding;
+  background: $dark;
+  color: $light;
+  padding: 60px 0;
 
   h3 {
+    width: 90%;
+    margin: 0 auto 30px;
     font-family: $font-title;
-    text-align: center;
-    margin-bottom: $testimonials-title-margin;
+    font-size: 22px;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: $marker-top;
-      left: 50%;
-      transform: translateX(-50%);
-      width: $marker-width;
-      height: $marker-height;
-      background: $marker-color;
-    }
   }
 
   .testimonials-container {
-    width: $testimonials-container-width;
+    width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: $testimonials-gap;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
 
     blockquote {
-      grid-column: span 4;
-      background: $testimonials-bg;
-      color: $black;
-      padding: $testimonials-padding-box;
-      border-radius: $testimonials-radius;
+      background: $light;
+      color: $text;
+      padding: 16px;
+      border-radius: 1px;
+      font-size: 12px;
     }
   }
 }
 
 .contact-form {
-  width: $section-width;
-  margin: $section-margin;
+  width: 90%;
+  margin: 60px auto;
 
   h3 {
     font-family: $font-title;
+    font-size: 22px;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: $marker-top;
-      left: 0;
-      width: $marker-width;
-      height: $marker-height;
-      background: $marker-color;
-    }
   }
 
   form {
-    width: $contact-form-width;
+    width: 88%;
     display: flex;
     flex-direction: column;
-    gap: $contact-form-gap;
+    gap: 8px;
 
     input,
     textarea {
-      background: $grey;
-      border: none;
-      padding: $contact-input-padding;
+      background: $form;
+      border: 1px solid #777;
+      padding: 7px;
+      font-size: 12px;
     }
 
     textarea {
-      height: $contact-textarea-height;
+      height: 120px;
     }
   }
 }
 
 .location {
-  width: $section-width;
-  margin: $section-margin;
+  width: 90%;
+  margin: 60px auto;
 
   h3 {
     font-family: $font-title;
+    font-size: 22px;
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: $marker-top;
-      left: 0;
-      width: $marker-width;
-      height: $marker-height;
-      background: $marker-color;
-    }
   }
 
   iframe {
     width: 100%;
-    height: $location-map-height;
+    height: 300px;
     border: none;
   }
 }
 
-footer {
-  background: $blue;
-  color: $white;
-  padding: $footer-padding;
-  display: $footer-display;
-  justify-content: $footer-justify;
-  flex-wrap: $footer-wrap;
+body > footer {
+  background: $dark;
+  color: $light;
+  padding: 34px 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
-  a {
-    color: $white;
-  }
+footer a {
+  color: $light;
+  text-decoration: none;
+  font-size: 12px;
+}
 
-  .newsletter input {
-    padding: $footer-input-padding;
-    background: $grey;
-    border: none;
-  }
+.newsletter input {
+  padding: 5px;
+  background: $form;
+  border: 1px solid #777;
 }

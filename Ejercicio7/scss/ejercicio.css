@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #F1F0EA;
+  background: #f1f0ea;
   font-family: "Neue Montreal";
   color: #000;
 }
@@ -17,14 +17,31 @@ body {
   gap: 20px;
 }
 
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 14px;
+}
+.btn.primary {
+  background: #e3be86;
+  color: #000;
+}
+.btn.secondary {
+  background: #c55a26;
+  color: #f5f5f5;
+}
+
 .hero {
-  background: #112C50;
-  color: #F5F5F5;
+  background: #112c50;
+  color: #f5f5f5;
   padding-bottom: 80px;
 }
 .hero .top-bar {
+  background: #112c50;
   padding: 8px 0;
-  background: #112C50;
 }
 .hero .top-bar .top-bar-content {
   width: 90%;
@@ -33,7 +50,7 @@ body {
   justify-content: space-between;
 }
 .hero .top-bar .top-bar-content a {
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-size: 14px;
 }
 .hero nav {
@@ -48,7 +65,7 @@ body {
   gap: 30px;
 }
 .hero nav ul a {
-  color: #F5F5F5;
+  color: #f5f5f5;
   font-weight: 700;
   text-decoration: none;
 }
@@ -64,24 +81,7 @@ body {
 }
 .hero .hero-content p {
   margin-bottom: 15px;
-  color: #F5F5F5;
-}
-
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 14px;
-}
-.btn.primary {
-  background: #E3BE86;
-  color: #000;
-}
-.btn.secondary {
-  background: #C55A26;
-  color: #F5F5F5;
+  color: #f5f5f5;
 }
 
 .about article {
@@ -106,8 +106,8 @@ body {
 .services {
   text-align: center;
   padding: 80px 0;
-  background: #112C50;
-  color: #F5F5F5;
+  background: #112c50;
+  color: #f5f5f5;
 }
 .services h3 {
   font-family: "Reckless Neue";
@@ -136,7 +136,7 @@ body {
   left: 0;
   width: 50px;
   height: 5px;
-  background: #126F8D;
+  background: #126f8d;
 }
 .team .team-members {
   display: grid;
@@ -156,8 +156,8 @@ body {
 }
 
 .testimonials {
-  background: #112C50;
-  color: #F5F5F5;
+  background: #112c50;
+  color: #f5f5f5;
   padding: 80px 0;
 }
 .testimonials h3 {
@@ -174,7 +174,7 @@ body {
   transform: translateX(-50%);
   width: 50px;
   height: 5px;
-  background: #126F8D;
+  background: #126f8d;
 }
 .testimonials .testimonials-container {
   width: 80%;
@@ -185,7 +185,7 @@ body {
 }
 .testimonials .testimonials-container blockquote {
   grid-column: span 4;
-  background: #F5F5F5;
+  background: #f5f5f5;
   color: #000;
   padding: 20px;
   border-radius: 10px;
@@ -206,7 +206,7 @@ body {
   left: 0;
   width: 50px;
   height: 5px;
-  background: #126F8D;
+  background: #126f8d;
 }
 .contact-form form {
   width: 70%;
@@ -216,7 +216,7 @@ body {
 }
 .contact-form form input,
 .contact-form form textarea {
-  background: #D9D9D9;
+  background: #d9d9d9;
   border: none;
   padding: 10px;
 }
@@ -239,7 +239,7 @@ body {
   left: 0;
   width: 50px;
   height: 5px;
-  background: #126F8D;
+  background: #126f8d;
 }
 .location iframe {
   width: 100%;
@@ -248,19 +248,19 @@ body {
 }
 
 footer {
-  background: #112C50;
-  color: #F5F5F5;
+  background: #112c50;
+  color: #f5f5f5;
   padding: 50px 0;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 footer a {
-  color: #F5F5F5;
+  color: #f5f5f5;
 }
 footer .newsletter input {
   padding: 8px;
-  background: #D9D9D9;
+  background: #d9d9d9;
   border: none;
 }
 
