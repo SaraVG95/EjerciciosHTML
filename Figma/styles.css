@@ -1,0 +1,33 @@
+div.container div.row div{
+	height: 100px;
+}
+
+.red{
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+}
+.green{
+	background-color: green;
+}
+.yellow{
+	background-color: yellow;
+}
+.white{
+	background-color: white;
+}
+.black{
+	background-color: black;
+}
+.purple{
+	background-color: purple;
+}
+.orange{
+	background-color: orange;
+}
+p{
+	text-align: center;
+	line-height: 100px;
+	font-weight: bold;
+}
