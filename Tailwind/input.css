@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+	/* Colores personalizados */
+	/* --color-micolor: #fef */
+
+}
+
+/* Clases personalizadas */
+	.botones{
+		@apply bg-orange-200 rounded-full p-3 shadow transition hover:scale-110 hover:bg-orange-400
+	}
+	.verificado{
+		@apply text-xl text-sky-600 px-3 py-1 font-mono border-2 rounded-full shadow-xl flex items-center gap-2 bg-black/90 z-10
+	}
+
+/* Fuentes personalizadas */
+	@font-face {
+		font-family: 'MiFuentePersonalizada';
+		src: url('./assets/fonts/MiFuentePersonalizada.woff2') format('woff2'),
+			 url('./assets/fonts/MiFuentePersonalizada.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+	}
