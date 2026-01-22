@@ -4,41 +4,119 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Tailwind</title>
-	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+	<link rel="stylesheet" href="./assets/output.css">
 </head>
-<body class="bg-sky-100">
+<body class="bg-sky-200 h-screen w-full flex flex-col">
 	<header class="bg-orange-300 p-4 text-center">
-		<h1 class="text-3xl">Tailwind</h1><br>
-		<p>Este es un ejemplo de uso de Tailwind</p>
-	</header>
-	<main class="p-4 text-center text-5xl font-bold text-blue-950 h-80">
-		Contenido principal
+		<img class="rounded-xl mx-auto h-96 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_90%,transparent),linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] [-webkit-mask-composite:source-in]"
+		alt="foto perfil" src="./assets/img/ImgCV.png">
 
-		<section class="my-8 p-4 text-2xl font-semibold text-purple-800">
-			<a class="items-left flex" href="">
-				<svg class="p-6 h-30">
-					<use xlink:href="./sprites.svg#github"/>
+		<div class="flex flex-col justify-center items-center mb-4 -mt-4">
+			<span class="verificado">
+				@Saravg
+				<svg class="w-7 h-7 inline-block" fill="currentColor">
+					<use xlink:href="./assets/sprites.svg#verified"/>
+				</svg>
+			</span>
+			<h1 class="text-3xl font-bold leading-tight m-1 text-blue-950">Sara Valdivieso Godoy</h1>
+		</div>
+
+		<section class="p-2 flex justify-center gap-3">
+			<a class="botones"
+			href="https://github.com/SaraVG95">
+				<svg class="w-12 h-12">
+					<use xlink:href="./assets/sprites.svg#github"/>
 				</svg>
 			</a>
-			<a class="items-right flex">
-				<svg class="p-6 h-30">
-					<use xlink:href="./sprites.svg#youtube"/>
+			<a class="botones"
+			href="https://www.linkedin.com/in/sara-valdivieso-g/">
+				<svg class="w-12 h-12">
+					<use xlink:href="./assets/sprites.svg#linkedin"/>
 				</svg>
 			</a>
-			<a class="items-right flex">
-				<svg class="p-6 h-30">
-					<use xlink:href="./sprites.svg#twitch"/>
+			<a class="botones"
+			href="https://www.instagram.com/chopo.s_paw_print/?igsh=YmJyNHhpNWxoNjA3#">
+				<svg class="w-12 h-12">
+					<use xlink:href="./assets/sprites.svg#instagram"/>
 				</svg>
 			</a>
-			<a class="items-right flex">
-				<svg class="p-6 h-30">
-					<use xlink:href="./sprites.svg#linkedin"/>
+			<a class="botones"
+			href="https://www.facebook.com/sara.valdivieso.92">
+				<svg class="w-12 h-12">
+					<use xlink:href="./assets/sprites.svg#facebook"/>
 				</svg>
 			</a>
 		</section>
+	</header>
+	<main class="p-4 text-blue-950 grow">
+		<div class="grid grid-cols-3 grid-rows-2 gap-2 w-full">
+			<a href="" class="relative rounded-3xl overflow-hidden bg-linear-to-br 
+			from-blue-300 to-blue-500
+			flex flex-col items-start hover:scale-105 hover:contrast-125 transition
+			group col-span-2 p-7 min-h-48
+			">
+				<span class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">
+					React.js
+				</span>
+				<svg class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group:hover:scale-125 transition-transform">
+					<use xlink:href="./assets/sprites.svg#react"/>
+				</svg>
+				<span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0">
+					Curso de +14 clases
+				</span>
+			</a>
+			<a href="" class="relative rounded-3xl overflow-hidden bg-linear-to-br 
+			from-red-200 to-red-500
+			flex flex-col items-start hover:scale-105 hover:contrast-125 transition
+			group p-7 min-h-48
+			">
+				<span class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">
+					HTML
+				</span>
+				<svg class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group:hover:scale-125 transition-transform">
+					<use xlink:href="./assets/sprites.svg#html"/>
+				</svg>
+				<span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0">
+					Para principiantes
+				</span>
+			</a>
+			<a href="" class="relative rounded-3xl overflow-hidden bg-linear-to-br 
+			from-purple-300 to-purple-500
+			flex flex-col items-start hover:scale-105 hover:contrast-125 transition
+			group p-7 min-h-48
+			">
+				<span class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">
+					CSS
+				</span>
+				<svg class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group:hover:scale-125 transition-transform">
+					<use xlink:href="./assets/sprites.svg#css"/>
+				</svg>
+				<span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0">
+					Para principiantes
+				</span>
+			</a>
+			<a href="" class="relative rounded-3xl overflow-hidden bg-linear-to-br 
+			from-green-300 to-green-500
+			flex flex-col items-start hover:scale-105 hover:contrast-125 transition
+			group col-span-2 p-7 min-h-48
+			">
+				<span class="absolute bottom-2 left-4 font-bold text-2xl group-hover:-translate-y-1 transition-transform">
+					Node.js
+				</span>
+				<svg class="absolute -right-4 -bottom-4 -rotate-6 size-28 group-hover:-rotate-12 group:hover:scale-125 transition-transform">
+					<use xlink:href="./assets/sprites.svg#node"/>
+				</svg>
+				<span class="absolute top-2 left-4 text-xs border rounded-xl px-1 py-0">
+					Curso de +14 clases
+				</span>
+			</a>
+		</div>
+		
+
 	</main>
 	<footer class="p-4 text-center bg-black text-white">
-		Desarrollado por @SaraVG
+		Desarrollado por ©SaraVG
 	</footer>
 </body>
 </html>
